@@ -56,7 +56,7 @@ namespace EventApp.Api.Controllers
             return Ok(evt);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult EditEvent(int id, EventDto eventDto)
         {
             var evt = _context.Events.Find(id); 
